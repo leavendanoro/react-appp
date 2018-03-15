@@ -20,6 +20,7 @@ class Register extends Component{
     render(){
         return(
             <div className="register-body">
+            <h2>Register</h2>
             <MuiThemeProvider>
                 <form>
                     <TextField

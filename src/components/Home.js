@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import '../styles/Home.css';
+import Register from './Register';
+
 
 class Home extends Component{
     render(){
         return(
             <div className="HomeBody">
-            <MuiThemeProvider>
+            <div className="HomeInfo">
                 <h1>Welcome to UNHealthy</h1>
-            </MuiThemeProvider>
+                <h3>Here is the Home info</h3>
+            </div>
+            <Register/>    
             </div>
         )
     }

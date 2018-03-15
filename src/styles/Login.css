@@ -1,3 +1,10 @@
 .login-body{
+    margin: 10%;
+    padding: 2%;
     text-align: center;
+    background-color: rgba(223, 223, 223, 0.329);
+    margin-right: 30%;
+    margin-left: 30%;
+    border: rgba(136, 130, 130, 0.404);
+    border-width: 10px;
 }
