@@ -13,7 +13,7 @@ class App extends Component {
         <Main/>
        {/* <footer className="App-footer">
         <p>UNHealty 2018</p>
-       </footer> */}
+        </footer> */}
       </div>
     );
   }
