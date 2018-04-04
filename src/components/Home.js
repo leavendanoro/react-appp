@@ -11,7 +11,9 @@ class Home extends Component{
                 <h1>Welcome to UNHealthy</h1>
                 <h3>Here is the Home info</h3>
             </div>
+            <div className="HomeForm">
             <Register/>    
+            </div>
             </div>
         )
     }

@@ -1,8 +1,16 @@
 
 .HomeBody {
+    overflow: hidden;
+    border: 1px solid black;
     padding: 10%;
 }
 .HomeInfo {
-    padding-left: 5%;
-    margin-right: 50%;
+    float: left;
+    border: 1px solid red;
+
+}
+.HomeForm{
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid blue;
 }
