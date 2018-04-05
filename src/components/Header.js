@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import React, {PropTypes} from 'react';  
+import React, { Component, PropTypes } from 'react';
 import '../styles/App.css';
-import {Link} from 'react-router-dom';
-import { Link, IndexLink } from 'react-router';  
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {connect} from 'react-redux';
+import {Link} from 'react-router';
 
 const style = {
     margin: 12,

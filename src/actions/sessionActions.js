@@ -1,5 +1,5 @@
 import * as types from './actionTypes';  
-import sessionApi from '../api/SessionApi';
+import sessionApi from 'src/api/SessionApi';
 
 export function loginSuccess(){
     return {type: types.LOG_IN_SUCCESS}

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import React, {PropTypes} from 'react'
+import React, { Component, PropTypes } from 'react';
 import {bindActionCreators} from 'redux';  
 import {connect} from 'react-redux';  
 import * as sessionActions from '../actions/sessionActions';
@@ -23,7 +22,7 @@ const muiTheme = getMuiTheme({
 class Login extends Component{
     constructor(props){
         super(props);
-        this.state = {credentials: {email= '', password: ''}}
+        this.state = {credentials: {email: '', password: ''}}
         this.onChange = this.onChange.bind(this);
         this.onSave = this.onSave.bind(this);
     }
