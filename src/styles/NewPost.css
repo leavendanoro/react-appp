@@ -1,0 +1,32 @@
+.NewPostBody{
+    padding: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.title{
+    float: left;
+}
+
+.form{
+    float: left; 
+    clear: left;
+}
+
+.button{
+    display: flex;
+}
+
+.belowbutton{
+    float: left; 
+}
+
+.closesession{
+    clear: right;
+    float: right; 
+}
+
+.formclosesession{
+    float: left; 
+    clear: left;
+    width: 100%;
+}
