@@ -1,0 +1,32 @@
+.ProfileBody{
+    padding: 10%;
+    border: 1px solid purple;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.first{
+    width: 50%;
+    float: left; /* add this */
+    border: 1px solid red;
+}
+
+.second{
+    border: 1px solid green;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
+.tablePadding{
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.tableP{
+    margin: 5%;
+}
+
+.button{
+    float: left;
+    margin: 2%;
+}
+
