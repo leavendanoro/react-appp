@@ -24,14 +24,20 @@ class Main extends Component{
                     <Route exact path="/" component={Home} />
                     <Route path="/register" component={Register} />
                     <Route path="/login" component={Login} />
-                    <Route path="/profile" component={Profile} />
-                    <Route path="/myroutine?id" component={MyRoutine} />
-                    <Route path="/mydiet?id" component={MyDiet} />
-                    <Route path="/editpost?id" component={EditPost} />
+                    <Route path="/profile" component={Profile} 
+                        onEnter={requireAuth}/>
+                    <Route path="/myroutine?id" component={MyRoutine}
+                        onEnter={requireAuth}/>
+                    <Route path="/mydiet?id" component={MyDiet} 
+                        onEnter={requireAuth}/>
+                    <Route path="/editpost?id" component={EditPost} 
+                        onEnter={requireAuth}/>
                     <Route path="/routinehelper" component={RoutineHelper} />
-                    <Route path="/newpost" component={NewPost} />
+                    <Route path="/newpost" component={NewPost} 
+                        onEnter={requireAuth}/>
                     <Route path="/viewpost?id" component={Post} />
-                    <Route path="/myposts" component={UserPosts} />
+                    <Route path="/myposts" component={UserPosts} 
+                        onEnter={requireAuth}/>
                     <Route path="/map" component={Mapa} />
                     <Route path="/posts" component={PostsGrid} />
                     <Route path="/wiewuser?name" component={ViewUser} />
