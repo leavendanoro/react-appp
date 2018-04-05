@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {bindActionCreators} from 'redux';  
 import {connect} from 'react-redux';  
 import * as sessionActions from '../actions/sessionActions';
@@ -37,6 +37,10 @@ class Login extends Component{
     onSave(event) {
         event.preventDefault();
         this.props.actions.logInUser(this.state.credentials);
+    }
+
+    request() {
+        fetch('url', {method: 'POST'})
     }
 
     render(){

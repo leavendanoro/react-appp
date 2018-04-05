@@ -1,9 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/App.css';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {connect} from 'react-redux';
-import {Link} from 'react-router';
+import {Link} from 'react-router-dom';
 
 const style = {
     margin: 12,
@@ -38,11 +39,11 @@ class Header extends Component{
 }
 
 Header.propTypes = {  
-    actions: PropTypes.object.isRequired
+    actions: PropTypes.object.isRequired,
   }
   
   function mapStateToProps(state, ownProps) {  
     return {logged_in: state.session};
   }
 
-export default connect(mapStateToProps)(Header);
+export default Header;
