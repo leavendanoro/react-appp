@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 import '../styles/Profile.css';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
 
+const style = {
+    margin: 12,
+    };
+
+const muiTheme = getMuiTheme({
+    textField: {
+        height: 50,
+        rigth: 0,
+    },
+});
+     
 
 class Profile extends Component{
     render(){
@@ -22,13 +36,20 @@ class Profile extends Component{
                                         <td>1200</td>
                                     </tr>
                                     <tr>
-                                        <td>Eve</td>
-                                        <td>Jackson</td>
-                                        <td>94</td>
+                                        <td>Abdomen</td>
+                                        <td>38</td>
+                                        <td>2500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Piernas</td>
+                                        <td>41</td>
+                                        <td>3120</td>
                                     </tr>
                             </table>
-                            <button className="button">Descargar Rutina</button>
-                            <button className="button">Crear Rutina</button>
+                            <MuiThemeProvider muiTheme={muiTheme}>
+                                <RaisedButton className="button" label="Descargar Rutina" style={style} /> 
+                                <RaisedButton className="button" label="Crear Rutina" style={style} /> 
+                            </MuiThemeProvider> 
                         </div>
                         <div className="tableP"> 
                             <table className = "tablePadding">
@@ -44,15 +65,20 @@ class Profile extends Component{
                                         <td>Vegetariana</td>
                                         <td>2500</td>
                                     </tr>
-                            </table> 
-                            <button className="button">Descargar Dieta</button>
-                            <button className="button">Crear Dieta</button>
+                            </table>
+                            <MuiThemeProvider muiTheme={muiTheme}>
+                                <RaisedButton className="button" label="Descargar Dieta" style={style} /> 
+                                <RaisedButton className="button" label="Crear Dieta" style={style} /> 
+                            </MuiThemeProvider> 
                         </div>
-                        <button className="button">Ver mis Post</button>
-                        <button className="button">Crear Post</button>
+                        <div className="postbuttons">
+                        <MuiThemeProvider muiTheme={muiTheme}>
+                                <RaisedButton className="button" label="Ver mis post" style={style} /> 
+                                <RaisedButton className="button" label="Crear Post" style={style} /> 
+                        </MuiThemeProvider> 
+                        </div>
                     </div>
                     <div className="second ">
-                        <p>This is another test</p>
                         <div>
                             <img src="http://via.placeholder.com/140x100" alt="placeholder"/>
                             <div>
@@ -64,17 +90,19 @@ class Profile extends Component{
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>    
                         </div>
                         <div>
-                            <p align="left">Progreso de hoy</p>
+                            <h4 align="left">Progreso de hoy</h4>
                             <progress max="100" value="80"></progress>
                         </div>   
                         <div>
-                            <p align="left">Logros obtenidos</p>
+                            <h4 align="left">Logros obtenidos</h4>
                             <img align="left" src="http://via.placeholder.com/50x50" alt="achivement" />
                             <img align="left" src="http://via.placeholder.com/50x50" alt="achivement" />
                             <img align="left" src="http://via.placeholder.com/50x50" alt="achivement" />
                         </div> 
                     </div>
-                    <button className="button">Cerrar Sesion</button>
+                    <MuiThemeProvider muiTheme={muiTheme}>
+                        <RaisedButton className="closesession" label="Cerrar Sesion" style={style} /> 
+                    </MuiThemeProvider> 
                 </div>
             </main>
         )
