@@ -10,6 +10,8 @@ class Profile extends Component{
             user_profile:{},
             user_routines:[],
             user_fav: [],
+            avatar: 'http://via.placeholder.com/140x100',
+            archiv: [],
         }
     }
     request(){
@@ -23,6 +25,8 @@ class Profile extends Component{
                     user_profile: data.normal_user,
                     user_routines: data.routines,
                     user_fav: data.favorites,
+                    avatar: data.normal_user.avatar.img,
+                    archiv: data.normal_user.achivements,
                 })
             }
 
@@ -102,7 +106,7 @@ class Profile extends Component{
                     </div>
                     <div className="second ">
                         <div>
-                            <img src="http://via.placeholder.com/140x100" alt="placeholder"/>
+                            <img src={this.state.avatar} alt="placeholder"/>
                             <div>
                                 <p>John Doe</p>
                                 <p>Rating: 4,5</p>
@@ -117,9 +121,11 @@ class Profile extends Component{
                         </div>   
                         <div>
                             <p align="left">Logros obtenidos</p>
-                            <img align="left" src="http://via.placeholder.com/50x50" alt="achivement" />
-                            <img align="left" src="http://via.placeholder.com/50x50" alt="achivement" />
-                            <img align="left" src="http://via.placeholder.com/50x50" alt="achivement" />
+                            {this.state.archiv.map(arch=>
+                                {return(
+                                    <img align="left" src={arch.achivement_icon} alt="achivement" />
+                                )}
+                            )}
                         </div> 
                     </div>
                     <button className="button">Cerrar Sesion</button>
