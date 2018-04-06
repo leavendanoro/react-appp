@@ -23,7 +23,7 @@ class PostsGrid extends Component{
             total_pages: 1,
         }
     }
-    request(){
+    request(API){
         fetch(API)
         .then((response) => {
             return response.json()
@@ -40,23 +40,22 @@ class PostsGrid extends Component{
         )
     }
     componentWillMount(){
-        this.request()
+        this.request(API)
     }
+
     render(){
-        const { posts } = this.state;
         const food = 'https://www.shareicon.net/download/2016/09/02/824429_fork_512x512.png';
-        const food2 = 'http://www.seeicons.com/images/iconstore/512/seeicons__57b2aae22e381.png';
         const exerc = 'https://138603-401650-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2016/03/exercise-icon-19.png';
         const prom = 'https://www.accenture.com/t20170411T102552Z__w__/ae-en/_acnmedia/Accenture/next-gen-4/service-solutions-consumer-goods/Accenture-TPM-Icon.pngla=en';
         var pages = [];
         for (var i = 1; i <= this.state.total_pages; i++) {
             pages.push(
                 <MuiThemeProvider>
-                        <Link to={`https://unhealthy-back.herokuapp.com/posts?page=${i}`}><RaisedButton key={i} label={`Pag ${i}`} style={style} /></Link>
+                       <RaisedButton key={i} label={`Pag ${i}`} style={style} onClick={this.request(`https://unhealthy-back.herokuapp.com/posts?page=${i}`)} />
                 </MuiThemeProvider>);
         }        
         return(
-            <div>
+            <div className="PostsBody">
                 {this.state.posts.map(post =>{
                     if(post.post_type == 0){
                         return(
@@ -121,4 +120,4 @@ class PostsGrid extends Component{
     }
 }
 
-export default PostsGrid;
+export default PostsGrid;   
