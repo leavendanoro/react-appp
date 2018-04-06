@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import '../styles/Profile.css';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const API = 'https://unhealthy-back.herokuapp.com/normal_users/2';
+
+const style = {
+    margin: 12,
+    };
 
 class Profile extends Component{
     constructor(props){
@@ -37,6 +44,7 @@ class Profile extends Component{
     }
     render(){
         return(
+            <MuiThemeProvider>
             <main>
                 <div className="ProfileBody">
                     <h1>{`${this.state.user_profile.user_email} PROFILE`}</h1>
@@ -61,7 +69,7 @@ class Profile extends Component{
                                         )}
                                     )}
                             </table>
-                            <button className="button">Descargar Rutina</button>
+                                <RaisedButton className="button" label="Descargar Rutina" style={style} /> 
                         </div>
                         <div className="tableP"> 
                             <h3>Mis Favoritos</h3>
@@ -100,13 +108,15 @@ class Profile extends Component{
                                         }
                                     )}
                             </table> 
+                            <div className="postbuttons">
+                                    <RaisedButton className="button" label="Ver mis post" style={style} /> 
+                                    <RaisedButton className="button" label="Crear Post" style={style} /> 
+                            </div>
                         </div>
-                        <button className="button">Ver mis Post</button>
-                        <button className="button">Crear Post</button>
                     </div>
                     <div className="second ">
                         <div>
-                            <img src={this.state.avatar} alt="placeholder"/>
+                            <img src={this.state.avatar} alt="placeholder"height="140" width="100"/>
                             <div>
                                 <p>John Doe</p>
                                 <p>Rating: 4,5</p>
@@ -116,21 +126,24 @@ class Profile extends Component{
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>    
                         </div>
                         <div>
-                            <p align="left">Progreso de hoy</p>
+                            <h4 align="left">Progreso de hoy</h4>
                             <progress max="100" value="80"></progress>
                         </div>   
                         <div>
                             <p align="left">Logros obtenidos</p>
                             {this.state.archiv.map(arch=>
                                 {return(
-                                    <img align="left" src={arch.achivement_icon} alt="achivement" />
+                                    <img align="left" src={arch.achivement_icon} alt="achivement" height="42" width="42"/>
                                 )}
                             )}
                         </div> 
                     </div>
-                    <button className="button">Cerrar Sesion</button>
+                    
+                        <RaisedButton className="closesession" label="Cerrar Sesion" style={style} /> 
+                     
                 </div>
             </main>
+            </MuiThemeProvider>
         )
     }
 }
