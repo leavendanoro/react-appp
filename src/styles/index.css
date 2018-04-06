@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png");
+  background-attachment: fixed;
 }
 
 .heading {
