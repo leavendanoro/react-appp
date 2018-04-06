@@ -11,9 +11,15 @@ class App extends Component {
           <Header/>
         </header>
         <Main/>
+<<<<<<< HEAD
        {/* <footer className="App-footer">
         <p>UNHealty 2018</p>
        </footer> */}
+=======
+       {/*<footer className="App-footer">
+        <p>UNHealty 2018</p>
+        </footer>*/}
+>>>>>>> 7352363dd4b0ba22c0f224de6d70063edce65037
       </div>
     );
   }

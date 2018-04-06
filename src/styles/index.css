@@ -5,3 +5,10 @@ body {
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png");
   background-attachment: fixed;
 }
+
+.heading {
+  font-weight: 700;
+}
+.subheading {
+  font-weight: 300;
+}

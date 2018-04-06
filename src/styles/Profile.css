@@ -1,0 +1,40 @@
+.ProfileBody{
+    padding: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png");
+    background-attachment: fixed;
+}
+
+.first{
+    width: 50%;
+    float: left; /* add this */
+}
+
+.second{
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
+.tablePadding{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.tableP{
+    margin: 5%;
+}
+
+.button{
+    float: left;
+    margin: 2%;
+}
+
+.closesession{
+    clear: right;
+    float: right; 
+}
+
+.postbuttons{
+        float: left; 
+        clear: left;
+        margin: 2%;
+}
